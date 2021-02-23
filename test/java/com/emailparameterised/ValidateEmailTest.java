@@ -20,7 +20,7 @@ import java.util.Collection;
 
     @Parameterized.Parameters
     public static Collection data(){
-            return Arrays.asList(new Object[][] { {"abc@yahoo.com",true},
+            return Arrays.asList(new Object[][] {{"abc@yahoo.com",true},
                                                   {"abc-100@yahoo.com.dasd",false},
                                                   {"abc111@yahoo.com",true},
                                                   {"abc-100@abc.com",true},
@@ -28,7 +28,7 @@ import java.util.Collection;
                                                   {"abc+100@gmail.com",true},
             });
     }
-    
+
     @Test
     public void givenEmailAsVar_ShouldReturnAsPerParametrisedResult{
         UserValidator validator = new UserValidator();
