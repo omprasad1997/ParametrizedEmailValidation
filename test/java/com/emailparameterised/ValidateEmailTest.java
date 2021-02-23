@@ -28,6 +28,7 @@ import java.util.Collection;
                                                   {"abc+100@gmail.com",true},
             });
     }
+    
     @Test
     public void givenEmailAsVar_ShouldReturnAsPerParametrisedResult{
         UserValidator validator = new UserValidator();

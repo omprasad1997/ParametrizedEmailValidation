@@ -8,5 +8,4 @@ public class UserValidator {
     public boolean validEmailAddress(String email) {
         return Pattern.matches(EMAIL_ADDRESS, email);
     }
-    
 }
