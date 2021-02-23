@@ -21,16 +21,15 @@ import java.util.Collection;
     @Parameterized.Parameters
     public static Collection data(){
             return Arrays.asList(new Object[][] {{"abc@yahoo.com",true},
-                                                  {"abc-100@yahoo.com.dasd",false},
+                                                  {"abc-100@.yahoo.com",false},
                                                   {"abc111@yahoo.com",true},
                                                   {"abc-100@abc.com",true},
                                                   {"abc.100@abc.com",true},
                                                   {"abc+100@gmail.com",true},
             });
     }
-
     @Test
-    public void givenEmailAsVar_ShouldReturnAsPerParametrisedResult{
+        public void givenEmailAsVar_ShouldReturnAsPerParametrisedResult(){
         UserValidator validator = new UserValidator();
         boolean result = validator.validEmailAddress(this.emailTest);
         Assert.assertEquals(this.expectedResult,result);
